@@ -28,7 +28,7 @@ class Card(db.Model):
         return f'<Card {self.id}>'
     
 
-#Ödev #2. Kullanıcı tablosunu oluşturun
+#Görev #2. Kullanıcı tablosunu oluşturun
 
 
 
@@ -46,7 +46,7 @@ def login():
             form_login = request.form['email']
             form_password = request.form['password']
             
-            #Ödev #4. yetkilendirmeyi uygulamak
+            #Görev #4. yetkilendirmeyi uygulamak
             
 
 
@@ -62,7 +62,7 @@ def reg():
         login= request.form['email']
         password = request.form['password']
         
-        #Ödev #3 Kullanıcı verilerinin veri tabanına kaydedilmesini sağlayın
+        #Görev #3 Kullanıcı verilerinin veri tabanına kaydedilmesini sağlayın
         
 
         
@@ -100,7 +100,7 @@ def form_create():
         text =  request.form['text']
 
         # Veri tabanına gönderilecek bir nesne oluşturma
-        card = Card(title=title, subtitle=subtitle, text=text)
+        card = Card(email=email, subtitle=subtitle, text=text)
 
         db.session.add(card)
         db.session.commit()
